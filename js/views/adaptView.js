@@ -91,7 +91,6 @@ class AdaptView extends Backbone.View {
       // Ignore bubbling events as they are outside of this view's scope
       return;
     }
-    if (!this.model.get('_isRendered')) return;
     const props = {
       // Add view own properties, bound functions etc
       ...this,

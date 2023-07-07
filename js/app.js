@@ -20,7 +20,6 @@ import 'core/js/scrolling';
 import 'core/js/headings';
 import 'core/js/navigation';
 import 'core/js/startController';
-import 'core/js/DOMElementModifications';
 import 'core/js/tooltips';
 import 'plugins';
 

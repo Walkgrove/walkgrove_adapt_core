@@ -11,7 +11,7 @@
     },
     "_theme": {
       "type": "string",
-      "default": "adapt-contrib-vanilla"
+      "default": "walkgrove_adapt_theme_vanilla"
     },
     "_menu": {
       "type": "string",
@@ -48,6 +48,23 @@
           "validators": [],
           "title": "Submit completion on every assessment attempt",
           "help": "Specifies that the completion status will be reported every time the assessment is completed (regardless of whether the user passes or fails), assuming the course completion criteria is met"
+        },
+        "_percentageBasedCompletion": {
+          "type": "boolean",
+          "default": false,
+          "inputType": "Checkbox",
+          "validators": [],
+          "title": "Submit completion by a  percentage of compoennts completed",
+          "help": "Specifies that the completion status will be reported once the specified percentage of compoennts are completed"
+        },
+        "_percentComponentsForCompletion": {
+           "type": "number",
+            "required": false,
+            "default": 80,
+            "title": "The percentage of component that need to be complete to set course completion",
+            "inputType": "Number",
+            "validators": ["required", "number"],
+            "help": "A percentage out of 100 i.e. 80"
         },
         "_shouldSubmitScore": {
           "type": "boolean",
@@ -195,7 +212,7 @@
         "small": {
           "type": "number",
           "required": true,
-          "default": 0,
+          "default": 420,
           "title": "Small",
           "inputType": "Number",
           "validators": ["required", "number"],
@@ -204,7 +221,7 @@
         "medium": {
           "type": "number",
           "required": true,
-          "default": 720,
+          "default": 820,
           "title": "Medium",
           "inputType": "Number",
           "validators": ["required", "number"],
@@ -213,7 +230,7 @@
         "large": {
           "type": "number",
           "required": true,
-          "default": 960,
+          "default": 1280,
           "title": "Large",
           "inputType": "Number",
           "validators": ["required", "number"],
@@ -222,7 +239,7 @@
         "xlarge": {
           "type": "number",
           "required": true,
-          "default": 1280,
+          "default": 1920,
           "title": "Extra Large",
           "inputType": "Number",
           "validators": ["required", "number"],

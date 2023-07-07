@@ -184,10 +184,7 @@ class Router extends Backbone.Router {
     const type = isCourse ? 'menu' : model.get('_type');
     const newLocation = isCourse ? 'course' : `${type}-${id}`;
 
-    model.set({
-      _isVisited: true,
-      _isRendered: true
-    });
+    model.set('_isVisited', true);
     await this.updateLocation(newLocation, type, id, model);
 
     Adapt.once('contentObjectView:ready', () => {
